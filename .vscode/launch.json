@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: runserver.py",
+            "name": "Python: hello_app/webapp.py",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/runserver.py",
+            "program": "${workspaceFolder}/hello_app/webapp.py",
         },
         {
             "name": "Python: Current File",
@@ -16,7 +16,8 @@
             "request": "launch",
             "program": "${file}",
             "env": {
-                "FLASK_ENV": "development"
+                "FLASK_ENV": "development",
+                "FLASK_APP": "hello_app/webapp.py"
             }
         },
         {
@@ -105,7 +106,7 @@
             "name": "Python: All debug Options",
             "type": "python",
             "request": "launch",
-            "pythonPath": "${config:python.pythonPath}",
+            "python": "${command:python.interpreterPath}",
             "program": "${file}",
             "module": "module.name",
             "env": {
